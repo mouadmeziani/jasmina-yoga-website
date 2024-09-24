@@ -1,0 +1,21 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "classes": "Kurse",
+    "contact": "Kontakt",
+    "booking": "Buchung"
+  },
+  "hero": {
+    "welcome": "Willkommen in Jasminas Yoga Studio",
+    "description": "Finden Sie Ihren inneren Frieden mit unseren Hatha-, Yin- und Thai-Yoga-Massagen."
+  },
+  "about": {
+    "heading": "Über Jasmina",
+    "description": "Jasmina ist eine zertifizierte Yogalehrerin mit über 10 Jahren Erfahrung im Unterrichten von Hatha Yoga, Yin Yoga und Thai-Yoga-Massagen."
+  },
+  "contact": {
+    "heading": "Kontaktieren Sie uns",
+    "description": "Zögern Sie nicht, uns für Anfragen oder Terminvereinbarungen zu kontaktieren."
+  }
+}
