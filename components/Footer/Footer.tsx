@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Container,
   Divider,
   IconButton,
   SimpleGrid,
@@ -20,7 +19,7 @@ export function Footer() {
   return (
     <Box bg="bg.accent.default" color="on-accent">
       <Stack
-        justify="space-between"
+        justify="space-around"
         align="start"
         direction={{ base: "column", lg: "row" }}
         py={{ base: "12", md: "16" }}
@@ -36,6 +35,7 @@ export function Footer() {
         <SimpleGrid
           columns={{ base: 2, md: 4 }}
           gap="8"
+          justifySelf="end"
           width={{ base: "full", lg: "auto" }}
         >
           {links.map((group, idx) => (
@@ -62,7 +62,7 @@ export function Footer() {
       <Stack
         pt="8"
         pb="12"
-        justify="space-between"
+        justify="center"
         direction={{ base: "column-reverse", md: "row" }}
         align="center"
         padding={5}
