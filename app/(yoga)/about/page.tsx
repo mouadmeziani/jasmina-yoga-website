@@ -2,6 +2,7 @@
 import JasPic from "@/images/Jas.jpeg";
 import { BriefBio } from "@/components/BriefBio";
 import { CareerSection } from "@/components/CareerSection";
+import { BioSection } from "@/components/BioSection";
 
 export default function AboutPage() {
   const bio = `Hallo, ich bin Jasmina.
@@ -52,7 +53,7 @@ Ich freue mich darauf, meine Erfahrungen mit dir zu teilen!`;
 
   return (
     <>
-      <BriefBio name="Jasmina" bio={bio} imageSrc={JasPic.src} />
+      <BioSection bio={bio} imageSrc={JasPic.src} />
       <CareerSection title="Mein Werdegang" careerEvents={careerEvents} />
     </>
   );
