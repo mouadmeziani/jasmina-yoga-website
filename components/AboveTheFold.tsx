@@ -1,11 +1,11 @@
 "use client";
 import { Box, Text, Image } from "@chakra-ui/react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import image from "@/images/backgroundimage.jpg";
 
 export function AboveTheFold() {
-  const { scrollY } = useViewportScroll();
-  const y = useTransform(scrollY, [0, 500], [0, -200]);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, -300]);
 
   return (
     <Box position="relative" height="100vh" overflow="hidden">
