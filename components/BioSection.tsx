@@ -1,7 +1,8 @@
 // components/BioSection.tsx
 "use client";
-import { Box, Text, Image, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, Text, Image, Flex, SimpleGrid, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 interface BioSectionProps {
   bio: string;
@@ -9,11 +10,20 @@ interface BioSectionProps {
 }
 
 export function BioSection({ bio, imageSrc }: BioSectionProps) {
+  const pathname = usePathname();
   return (
-    <Box py="12" px="6">
+    <Box
+      maxW="7xl"
+      mx="auto"
+      mb="4em"
+      textAlign="center"
+      mt={pathname === "/about" ? "5em" : "0"}
+    >
+      {pathname === "/" && <Heading mb="6">Biographie</Heading>}
       <SimpleGrid
-        gridTemplateColumns={{ base: "1fr", md: "1fr 4fr" }}
+        gridTemplateColumns={{ base: "1fr", md: "3fr 5fr" }}
         alignItems="center"
+        justifyItems="center"
       >
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -29,7 +39,7 @@ export function BioSection({ bio, imageSrc }: BioSectionProps) {
             mb={{ base: "8", md: "0" }}
           />
         </motion.div>
-        <Text fontSize="lg" color="gray.700">
+        <Text fontSize="lg" color="gray.700" textAlign="left" ml="15">
           {bio}
         </Text>
       </SimpleGrid>
