@@ -1,5 +1,3 @@
-// app/kurse/page.tsx
-"use client";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import { ClassCard } from "@/components/ClassCard";
 

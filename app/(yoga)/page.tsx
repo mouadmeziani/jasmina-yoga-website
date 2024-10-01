@@ -1,5 +1,3 @@
-// app/page.tsx
-"use client";
 import { AboveTheFold } from "@/components/AboveTheFold";
 import { BioSection } from "@/components/BioSection";
 import { OfferingsSection } from "@/components/OfferingsSection";

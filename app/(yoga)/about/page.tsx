@@ -1,4 +1,3 @@
-"use client";
 import JasPic from "@/images/Jas.jpeg";
 import { BriefBio } from "@/components/BriefBio";
 import { CareerSection } from "@/components/CareerSection";
