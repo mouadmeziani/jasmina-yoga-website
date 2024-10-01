@@ -33,7 +33,7 @@ export default function ClassesPage() {
       schedule: "Freitags, 17:00 - 18:30 Uhr",
       buttonText: "Mehr erfahren",
     },
-  ];
+   ];
 
   return (
     <Box py="12" px="6" maxW="7xl" mx="auto">
