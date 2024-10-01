@@ -1,11 +1,11 @@
 "use client";
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Image, Heading } from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import image from "@/images/backgroundimage.jpg";
 
 export function AboveTheFold() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, -300]);
+  const y = useTransform(scrollY, [0, 500], [0, -150]);
 
   return (
     <Box position="relative" height="100vh" overflow="hidden">
@@ -26,9 +26,9 @@ export function AboveTheFold() {
         color="white"
         textAlign="center"
       >
-        <Text fontSize="6xl" fontWeight="bold">
+        <Heading as="h1" fontSize="6xl" fontWeight="bold">
           Willkommen bei Jasminas Yoga-Studio
-        </Text>
+        </Heading>
       </Box>
     </Box>
   );
