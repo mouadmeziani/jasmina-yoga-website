@@ -10,6 +10,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+
 export function ContactForm() {
   const {
     register,

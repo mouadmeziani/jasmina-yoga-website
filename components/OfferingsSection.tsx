@@ -1,21 +1,10 @@
 // components/OfferingsSection.tsx
 "use client";
+import { Offering } from "@/app/(yoga)/page";
 import { Box, Heading, Text, SimpleGrid, Stack, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { IconType } from "react-icons";
 
-interface Offering {
-  title: string;
-  description: string;
-  icon: IconType;
-  iconColor: string;
-}
-
-interface OfferingsSectionProps {
-  offerings: Offering[];
-}
-
-export function OfferingsSection({ offerings }: OfferingsSectionProps) {
+export function OfferingsSection({ offerings }: { offerings: Offering[] }) {
   return (
     <Box py="12" px="6" bg="gray.50">
       <Box maxW="7xl" mx="auto" textAlign="center">

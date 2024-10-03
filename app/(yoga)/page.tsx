@@ -1,8 +1,17 @@
-import { AboveTheFold } from "@/components/AboveTheFold";
-import { BioSection } from "@/components/BioSection";
-import { OfferingsSection } from "@/components/OfferingsSection";
-import { FaLeaf, FaHeart, FaSpa } from "react-icons/fa";
-import JasPic from "@/images/Jas.jpeg";
+'use client';
+import { AboveTheFold } from '@/components/AboveTheFold';
+import { BioSection } from '@/components/BioSection';
+import { OfferingsSection } from '@/components/OfferingsSection';
+import { FaLeaf, FaHeart, FaSpa } from 'react-icons/fa';
+import JasPic from '@/images/Jas.jpeg';
+import { IconType } from 'react-icons';
+
+export type Offering = {
+  title: string;
+  description: string;
+  icon: IconType;
+  iconColor: string;
+};
 export default function HomePage() {
   const bio = `Hallo, ich bin Jasmina.
 
@@ -18,25 +27,25 @@ Ich freue mich darauf, meine Erfahrungen mit dir zu teilen!`;
 
   const offerings = [
     {
-      title: "Hatha Yoga",
+      title: 'Hatha Yoga',
       description:
-        "Klassisches Yoga zur Stärkung von Körper und Geist durch Asanas und Atemübungen.",
+        'Klassisches Yoga zur Stärkung von Körper und Geist durch Asanas und Atemübungen.',
       icon: FaLeaf,
-      iconColor: "teal.500",
+      iconColor: 'teal.500',
     },
     {
-      title: "Yin Yoga",
+      title: 'Yin Yoga',
       description:
-        "Sanfte Übungen zur Entspannung und zum Loslassen tiefliegender Verspannungen.",
+        'Sanfte Übungen zur Entspannung und zum Loslassen tiefliegender Verspannungen.',
       icon: FaHeart,
-      iconColor: "pink.500",
+      iconColor: 'pink.500',
     },
     {
-      title: "(Trauma) Sensibles Yoga",
+      title: '(Trauma) Sensibles Yoga',
       description:
-        "Speziell entwickeltes Yoga für Menschen mit traumatischen Erfahrungen.",
+        'Speziell entwickeltes Yoga für Menschen mit traumatischen Erfahrungen.',
       icon: FaSpa,
-      iconColor: "purple.500",
+      iconColor: 'purple.500',
     },
   ];
 
