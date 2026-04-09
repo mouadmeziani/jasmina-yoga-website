@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jasmina Yoga Website
 
-## Getting Started
+A modern, multilingual landing page for a yoga instructor built with Next.js 14 and Chakra UI. Features responsive design, internationalization, and a clean component-based architecture.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Bilingual Support** - Full German/English translations using next-intl
+- **Responsive Design** - Mobile-first approach with Chakra UI's responsive system
+- **Professional Layout** - Hero section, bio, class offerings, contact form
+- **Type-Safe** - Full TypeScript implementation
+- **Optimized Images** - Next.js Image component with Sharp for optimal loading
+- **Form Validation** - Contact form with react-hook-form validation
+- **Modern Stack** - Next.js 14 App Router with React 18
+
+## Pages
+
+- **Home** (`/`) - Hero section, instructor bio, yoga offerings overview
+- **About** (`/about`) - Detailed biography and teaching philosophy
+- **Classes** (`/classes`) - Class types: Hatha Yoga, Yin Yoga, Trauma-Sensitive Yoga
+- **Booking** (`/booking`) - Class reservation interface
+- **Contact** (`/contact`) - Contact form for inquiries
+
+## Tech Stack
+
+**Framework:**
+- Next.js 14 (App Router)
+- React 18
+- TypeScript
+
+**UI/Styling:**
+- Chakra UI (component library)
+- Emotion (CSS-in-JS)
+- Framer Motion (animations)
+- React Icons
+
+**Internationalization:**
+- next-intl (German/English support)
+
+**Forms:**
+- react-hook-form (validation and state management)
+
+**Code Quality:**
+- ESLint + TypeScript ESLint
+- Prettier (code formatting)
+
+## Project Structure
+
+```
+app/
+├── (yoga)/           # Route group for main pages
+│   ├── about/
+│   ├── classes/
+│   ├── contact/
+│   ├── booking/
+│   └── page.tsx      # Homepage
+├── layout.tsx        # Root layout
+└── providers.tsx     # Chakra UI + i18n providers
+
+components/
+├── AboveTheFold.tsx  # Hero section
+├── BioSection.tsx    # Instructor bio
+├── OfferingsSection.tsx  # Class offerings grid
+├── ContactForm.tsx   # Contact form with validation
+├── Header/           # Navigation components
+└── Footer/           # Footer components
+
+messages/
+├── en.json           # English translations
+└── de.json           # German translations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+yarn install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+yarn dev
 
-## Learn More
+# Build for production
+yarn build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+yarn start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to `http://localhost:3000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Internationalization
 
-## Deploy on Vercel
+The site supports German (default) and English. Language switching is handled via URL prefixes:
+- German: `/` or `/de`
+- English: `/en`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Translation files are located in `/messages/[locale].json`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Component Architecture
+
+Built with reusable, composable components following React best practices:
+
+- **AboveTheFold** - Full-screen hero with background image and CTA
+- **BioSection** - Two-column layout with image and biography text
+- **OfferingsSection** - Grid of yoga class offerings with icons
+- **ClassCard** - Reusable card component for class descriptions
+- **ContactForm** - Form with validation, accessible inputs, error handling
+
+All components are fully typed with TypeScript and use Chakra UI's responsive props.
+
+## Design Principles
+
+- **Mobile-First** - Optimized for mobile with responsive breakpoints
+- **Accessibility** - Semantic HTML, ARIA labels, keyboard navigation
+- **Performance** - Optimized images, code splitting, lazy loading
+- **Clean Code** - ESLint/Prettier enforced, consistent naming conventions
+
+## Client Context
+
+Developed for Jasmina, a certified yoga instructor specializing in:
+- Hatha Yoga (strength and breath work)
+- Yin Yoga (deep relaxation and flexibility)
+- Trauma-Sensitive Yoga (specialized practice for trauma survivors)
+
+The site emphasizes mindfulness, self-acceptance, and holistic wellness.
